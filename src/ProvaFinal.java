@@ -1,6 +1,8 @@
 import java.util.Scanner;
 //fiz as questões como classes e usei enum e switch para chamar cada uma delas.
-
+//problemas encontrados Enum, as opções comecam em 0, então resolvi colocando SAIR no inicio
+//Formulas busquei com auxilio do GPT
+//Optei por trabalhar com float na questão1 por dificuldade na conversão, feito 100% a mão.
 
 public class ProvaFinal {
 
@@ -51,7 +53,7 @@ public class ProvaFinal {
         double media = soma / n;
 
         System.out.println("\nA média é:(" + media + ") E os alunos acima dela são:");
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {//verifica a nota do aluno se ela é acima da media e imprime, if sem else
             if (notas[i] > media) {
                 System.out.println(nomes[i] + " - Nota: " + notas[i]);
             }
@@ -67,7 +69,7 @@ public class ProvaFinal {
         int fatias = scanner.nextInt();
 
         int fatiasPorMembro = fatias / membros;
-        int sobra = fatias % membros;
+        int sobra = fatias % membros;//Mod para calcular o resto
 
         System.out.println("Cada um vai ganhar " + fatiasPorMembro + " fatias.");
 
@@ -100,7 +102,7 @@ public class ProvaFinal {
 
         if (ehPrimo) {
             System.out.println("O número " + numero + " é primo.");
-        } else {
+        } else {//Sim fiz uma piada porque sou velha guarda
             System.out.println("O número " + numero + " não é primo. \nSó se for seu primo(parente)");
         }
     }
@@ -109,7 +111,7 @@ public class ProvaFinal {
         Scanner scanner = new Scanner(System.in);
         Questoes opcao;
 
-        do {
+        do {//Tentei fazer sem o "do" mas estava dando erro então me rendi ao codigo proposto.
             System.out.println("\nEscolha uma questão para executar:");
             System.out.println("0 - Sair");
             System.out.println("1 - Questão 1");
